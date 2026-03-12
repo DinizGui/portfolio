@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { TechStack } from "@/components/TechStack";
+import { GitHubActivity } from "@/components/GitHubActivity";
 import { Projects } from "@/components/Projects";
 import { Differentiators } from "@/components/Differentiators";
 import { Contact } from "@/components/Contact";
@@ -15,6 +16,7 @@ export default function Home() {
         <Hero />
         <About />
         <TechStack />
+        <GitHubActivity />
         <Projects />
         <Differentiators />
         <Contact />
