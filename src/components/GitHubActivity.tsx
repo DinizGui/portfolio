@@ -23,15 +23,15 @@ export function GitHubActivity() {
             <span className="flex h-4 w-4 items-center justify-center rounded-full bg-indigo-500/40">
               <Github size={10} />
             </span>
-            Live GitHub Contributions
+            Contribuições em tempo real
           </span>
 
           <h2 className="mb-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
-            GitHub Activity
+            Atividade no GitHub
           </h2>
           <p className="mx-auto max-w-xl text-sm text-zinc-400 md:text-base">
-            This graph highlights my recent coding activity and contributions
-            across open source and personal projects.
+            Este painel destaca minha atividade recente de código e
+            contribuições em projetos pessoais e open source.
           </p>
         </motion.div>
 
@@ -67,7 +67,7 @@ export function GitHubActivity() {
             >
               <div className="rounded-2xl border border-slate-800/70 bg-slate-950/70 p-3 md:p-4">
                 <p className="mb-2 text-left text-xs font-medium uppercase tracking-[0.16em] text-zinc-500">
-                  GitHub Stats
+                  Estatísticas do GitHub
                 </p>
                 <div className="flex justify-center">
                   <img
@@ -81,7 +81,7 @@ export function GitHubActivity() {
 
               <div className="rounded-2xl border border-slate-800/70 bg-slate-950/70 p-3 md:p-4">
                 <p className="mb-2 text-left text-xs font-medium uppercase tracking-[0.16em] text-zinc-500">
-                  Top Languages
+                  Principais linguagens
                 </p>
                 <div className="flex justify-center">
                   <img
@@ -102,10 +102,10 @@ export function GitHubActivity() {
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 px-6 py-2.5 text-sm font-medium text-white shadow-[0_10px_30px_rgba(79,70,229,0.55)] transition-all hover:scale-[1.02] hover:shadow-[0_16px_40px_rgba(79,70,229,0.7)]"
               >
                 <Github size={16} />
-                View my GitHub Profile
+                Ver meu perfil no GitHub
               </button>
               <p className="text-xs text-zinc-500 md:text-sm">
-                Consistent coding and contribution history on GitHub.
+                Histórico consistente de código e contribuições no GitHub.
               </p>
             </div>
           </div>
