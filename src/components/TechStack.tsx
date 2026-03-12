@@ -1,4 +1,4 @@
-"use client";
+ "use client";
 
 import { motion } from "framer-motion";
 import {
@@ -43,7 +43,7 @@ const categories = [
   },
   {
     id: "database",
-    title: "Database",
+    title: "Banco de Dados",
     count: 2,
     techs: [
       { name: "MySQL", Icon: SiMysql, color: "#4479A1" },
@@ -52,7 +52,7 @@ const categories = [
   },
   {
     id: "automation",
-    title: "Automation & Trading",
+    title: "Automacao & Trading",
     count: 2,
     techs: [
       { name: "MetaTrader 5", Icon: Workflow, color: "#22C55E" },
@@ -61,7 +61,7 @@ const categories = [
   },
   {
     id: "cloud",
-    title: "Cloud & Deployment",
+    title: "Cloud & Deploy",
     count: 4,
     techs: [
       { name: "Railway", Icon: SiRailway, color: "#0B0D0E" },
@@ -70,7 +70,7 @@ const categories = [
       { name: "GitHub Actions (CI/CD)", Icon: SiGithubactions, color: "#2088FF" },
     ],
   },
-];
+] as const;
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -89,19 +89,17 @@ const itemVariants = {
   },
 };
 
-export function Stack() {
+export function TechStack() {
   return (
     <section
       id="stack"
       className="relative overflow-hidden px-6 py-24 md:py-32"
     >
-      {/* Background glow */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-1/2 top-0 h-96 w-[600px] -translate-x-1/2 rounded-full bg-indigo-500/5 blur-[120px]" />
       </div>
 
       <div className="relative mx-auto max-w-6xl">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -110,14 +108,14 @@ export function Stack() {
           className="mb-16 text-center"
         >
           <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            Tech Stack I Use
+            Tech Stack que utilizo
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-zinc-400">
-            Tools and technologies I use to build scalable applications
+            Ferramentas e tecnologias que utilizo para construir aplicacoes
+            escalaveis
           </p>
         </motion.div>
 
-        {/* Category cards */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -125,7 +123,7 @@ export function Stack() {
           viewport={{ once: true, margin: "-80px" }}
           className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"
         >
-          {categories.map((category, categoryIndex) => (
+          {categories.map((category) => (
             <motion.div
               key={category.id}
               variants={itemVariants}
@@ -136,12 +134,12 @@ export function Stack() {
                   {category.title}
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {category.techs.map(({ name, Icon, color }) => (
+                  {category.techs.map((tech) => (
                     <TechBadge
-                      key={name}
-                      name={name}
-                      icon={Icon}
-                      color={color}
+                      key={tech.name}
+                      name={tech.name}
+                      icon={tech.Icon}
+                      color={tech.color}
                     />
                   ))}
                 </div>
@@ -153,7 +151,6 @@ export function Stack() {
           ))}
         </motion.div>
 
-        {/* Bottom counters */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -161,13 +158,15 @@ export function Stack() {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="mt-12 flex flex-wrap justify-center gap-4"
         >
-          {categories.map(({ title, count }) => (
+          {categories.map((category) => (
             <div
-              key={title}
+              key={category.id}
               className="rounded-full border border-zinc-700/50 bg-white/[0.02] px-5 py-2.5 text-sm text-zinc-400 backdrop-blur-sm transition-colors hover:border-indigo-500/30 hover:text-zinc-300"
             >
-              <span className="font-semibold text-indigo-400">{count}</span>{" "}
-              {title}
+              <span className="font-semibold text-indigo-400">
+                {category.count}
+              </span>{" "}
+              {category.title}
             </div>
           ))}
         </motion.div>
@@ -176,15 +175,15 @@ export function Stack() {
   );
 }
 
-function TechBadge({
-  name,
-  icon: Icon,
-  color,
-}: {
+type TechIcon = React.ComponentType<{ size?: number; className?: string }>;
+
+interface TechBadgeProps {
   name: string;
-  icon: React.ComponentType<{ size?: number; className?: string }>;
+  icon: TechIcon;
   color: string;
-}) {
+}
+
+function TechBadge({ name, icon: Icon, color }: TechBadgeProps) {
   return (
     <motion.span
       whileHover={{
@@ -200,5 +199,4 @@ function TechBadge({
     </motion.span>
   );
 }
-
 

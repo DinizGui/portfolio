@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
-import { Stack } from "@/components/Stack";
+import { TechStack } from "@/components/TechStack";
 import { Projects } from "@/components/Projects";
 import { Differentiators } from "@/components/Differentiators";
 import { Contact } from "@/components/Contact";
@@ -14,7 +14,7 @@ export default function Home() {
       <main>
         <Hero />
         <About />
-        <Stack />
+        <TechStack />
         <Projects />
         <Differentiators />
         <Contact />
