@@ -18,38 +18,29 @@ export const config = {
 
   // Redes sociais
   social: {
-    github: "https://github.com",
-    linkedin: "https://linkedin.com",
+    github: "https://github.com/DinizGui",
+    linkedin: "https://www.linkedin.com/in/guilherme-diniz-93b090248/",
   },
 
   // Projetos (adicione, remova ou edite)
   projects: [
     {
-      title: "E-commerce de alto desempenho",
+      title: "FlowFinance — Gestão financeira inteligente",
       description:
-        "Plataforma de vendas com carrinho inteligente, pagamentos integrados e dashboard analytics em tempo real.",
-      tags: ["Next.js", "Stripe", "PostgreSQL"],
+        "Plataforma para gestão financeira de renda variável: projete sua renda, calcule o gasto seguro e simule cenários em tempo real.",
+      tags: ["Next.js", "TypeScript", "Prisma", "Tailwind CSS"],
       gradient: "from-indigo-500 to-cyan-500",
-      href: "#",
-      github: "#",
+      href: "https://financias-mrby.vercel.app",
+      github: "https://github.com/DinizGui/financias",
     },
     {
-      title: "SaaS B2B multi-tenant",
+      title: "WhatsApp IA — Automação de atendimento",
       description:
-        "Sistema completo com autenticação, gestão de equipes, billing e webhooks para integrações.",
-      tags: ["React", "Node.js", "AWS"],
-      gradient: "from-violet-500 to-indigo-500",
-      href: "#",
-      github: "#",
-    },
-    {
-      title: "Dashboard de analytics",
-      description:
-        "Visualização de dados em tempo real com gráficos interativos, exportação e alertas customizados.",
-      tags: ["Next.js", "D3.js", "Supabase"],
-      gradient: "from-cyan-500 to-indigo-500",
-      href: "#",
-      github: "#",
+        "Servidor Node.js que integra WhatsApp com IA para respostas automatizadas e fluxos inteligentes.",
+      tags: ["Node.js", "Express", "WhatsApp", "AI"],
+      gradient: "from-slate-900 to-slate-800",
+      href: "https://github.com/DinizGui/whatsapp-IA",
+      github: "https://github.com/DinizGui/whatsapp-IA",
     },
   ],
 } as const;

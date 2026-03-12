@@ -5,33 +5,24 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "E-commerce de alto desempenho",
+    title: "FlowFinance — Gestão financeira inteligente",
     description:
-      "Plataforma de vendas com carrinho inteligente, pagamentos integrados e dashboard analytics em tempo real.",
-    tags: ["Next.js", "Stripe", "PostgreSQL"],
+      "Plataforma para gestão financeira de renda variável: projete sua renda, calcule o gasto seguro e simule cenários em tempo real.",
+    tags: ["Next.js", "TypeScript", "Prisma", "Tailwind CSS"],
     image: "linear-gradient(135deg, #6366f1 0%, #22d3ee 100%)",
-    href: "#",
-    github: "#",
+    href: "https://financias-mrby.vercel.app",
+    github: "https://github.com/DinizGui/financias",
   },
   {
-    title: "SaaS B2B multi-tenant",
+    title: "WhatsApp IA — Automação de atendimento",
     description:
-      "Sistema completo com autenticação, gestão de equipes, billing e webhooks para integrações.",
-    tags: ["React", "Node.js", "AWS"],
-    image: "linear-gradient(135deg, #a78bfa 0%, #6366f1 100%)",
-    href: "#",
-    github: "#",
+      "Servidor Node.js que integra WhatsApp com IA para respostas automatizadas e fluxos inteligentes.",
+    tags: ["Node.js", "Express", "WhatsApp", "AI"],
+    image: "linear-gradient(135deg, #0f172a 0%, #1f2937 100%)",
+    href: "https://github.com/DinizGui/whatsapp-IA",
+    github: "https://github.com/DinizGui/whatsapp-IA",
   },
-  {
-    title: "Dashboard de analytics",
-    description:
-      "Visualização de dados em tempo real com gráficos interativos, exportação e alertas customizados.",
-    tags: ["Next.js", "D3.js", "Supabase"],
-    image: "linear-gradient(135deg, #22d3ee 0%, #6366f1 100%)",
-    href: "#",
-    github: "#",
-  },
-];
+] as const;
 
 export function Projects() {
   return (
